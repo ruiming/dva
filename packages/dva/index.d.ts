@@ -6,6 +6,7 @@ import {
   MiddlewareAPI,
   StoreEnhancer
 } from 'redux';
+import { Connect } from 'react-redux';
 
 import { History } from "history";
 
@@ -44,7 +45,7 @@ export interface EffectsCommandMap {
 
 export type Effect = (action: Action, effects: EffectsCommandMap) => void;
 export type EffectType = 'takeEvery' | 'takeLatest' | 'watcher' | 'throttle';
-export type EffectWithType = [Effect, { type : EffectType }];
+export type EffectWithType = [Effect, { type: EffectType }];
 export type Subscription = (api: SubscriptionAPI, done: Function) => void;
 export type ReducersMapObjectWithEnhancer = [ReducersMapObject, ReducerEnhancer];
 
@@ -123,9 +124,4 @@ export default function dva(opts?: DvaOption): DvaInstance;
 /**
  * Connects a React component to Dva.
  */
-export function connect(
-  mapStateToProps?: Function,
-  mapDispatchToProps?: Function,
-  mergeProps?: Function,
-  options?: Object
-): Function;
+export const connect: Connect

@@ -34,6 +34,7 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.34",
     "@types/isomorphic-fetch": "^0.0.34",
+    "@types/react-redux": "^5.0.14",
     "@types/react-router": "2.x",
     "@types/react-router-redux": "^4.0.40",
     "dva-core": "^1.1.0",
